@@ -1,0 +1,27 @@
+Basic points for the data course
+================================
+* Best practice
+* What is data?
+* Why is data important?
+ - got already, collect, generate
+ - meta data, where does it come from, provenance, licensing
+ 
+ 
+ ...
+ 
+ ecmwf, met office - info about dig data, government reports
+ 
+ * Storage of data - backing up, how and where? Compression, encryption, big endian/little endian, sharing data, cloud, commenting code
+ 
+ * Tools
+  - How you use data - computer code or script
+ 
+  - What might you want to do with data - merge, manipulate, generate
+ 
+  - what tools avail - languages (MATLAB, Python)
+  - unit tests & regression testing
+  - v & v
+ 
+  - Version control systems - team development (github, bitbucket)
+
+* Exercises - generating an account. choosing MATLAB or Python. Here's some data, let's do something with it, and get it into bitbucket/git
