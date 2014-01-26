@@ -18,7 +18,7 @@ Basic points for the data course
  
   - What might you want to do with data - merge, manipulate, generate
  
-  - what tools avail - languages (MATLAB, Python)
+  - what tools are available - languages (MATLAB, Python)
   - unit tests & regression testing
   - v & v
  
