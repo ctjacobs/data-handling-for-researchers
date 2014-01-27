@@ -18,43 +18,51 @@
 After the course, students will:
 \begin{itemize}
    \item Understand what data is and why it is important.
-   \item Be aware of best practices when handling and storing data.
    \item Understand the need to backup, compress, and encrypt data.
+   \item Be aware of best practices when handling and managing data.
    \item Be aware of the tools available for analysis and testing of data.
-   \item Be able to use a version-controlled file repository.
+   \item Know the basics of version-controlled file repositories.
    \item Be able to analyse a data set.
 \end{itemize}
 
 \section{Topics covered}
 
 \subsection{What is data?}
-Data is a set of values corresponding to one or more quantitative or qualitative variables. Examples: .......
+Data is a set of values corresponding to one or more quantitative or qualitative variables. Examples: sea levels measured every hour at a fixed location, speed of a car throughout time, webpage metadata (data that describes other data), wind velocity at different locations in the UK. 
 
-\subsection{Why is data important?}
-Permits new scientific discoveries.
+\subsection{Why is it important?}
+Data can come from existing sources, may be derived from several data sets, or a new independent data set can be generated. The creation and analysis of data permits new scientific discoveries to be made. Furthermore, journals and research councils are increasingly encouraging the sharing of data amongst researchers in order to promote research output, minimise the duplication of data, increase transparency and accountability, and allow fellow researchers to scrutinise and evaluate the data. The effective handling and management of all research data plays an important role in each of these processes.
 
-Data can come from existing sources, may be derived from several data sets, or generated.
+\subsection{Issues to consider when handling data}
+Data provenance: Where did the data originally come from? Can it be trusted?
 
-Data provenance: where did the data originally come from? Can it be trusted?
+Licensing: who can use the data, and how? Who owns the copyright?
 
-Licensing: who can use the data, and how?
+File formats: using standardised, open-source file formats makes your data portable and facilitates sharing of data by other researchers. Mention XML and CSV.
 
-\subsection{Best Practices}
-Know the Imperial College data backup policy.
-Always keep several regular backups, far apart from each other (not in the same building).
-Responsibility to encrypt sensitive information, both locally and when transferring data to another location.
+Storage: Optical media (CDs ~700 MB, DVDs ~4.7 GB), magnetic media (hard drives for larger amounts of storage), cloud services, flash drives. Always maintain a good file hierarchy and naming convention when storing data files.
 
-\subsection{Data storage}
+Encryption: Be aware of responsibilities to encrypt sensitive information, both locally and when transferring data to another location.
 
-Cloud services 
+Backing-up: Always keep several regular backups, far apart from each other (not in the same building). Know the Imperial College data backup policy.
 
-\subsection{Tools}
+Big data: One of the key challenges in data science. Involves data sets that are extremely large (typically several terabytes to several petabytes), thereby creating additional difficulties when analysing them. Need novel and efficient tools to help tackle this issue.
 
+\subsection{Creating and manipulating data}
+Tools: Data sets are often merged, manipulated, and generated using computer programs or scripts. Such programs/scripts are often written in the MATLAB or Python programming language.
+
+Quality assurance: If you are generating data using a program (e.g. a CFD code like Fluidity), it is important to regularly test that program for correctness. This can be achieved through regression testing. The data itself should also be tested using verification and validation techniques.
+
+Commenting and documenting: Always comment and document your code to help yourself and others to understand how to use it. Use metadata to document the name of the author, the date the data was created, any terms of use, etc.
+
+Version control systems: used to keep track of changes to data, and the programs used to generate data. Facilitates team development. Some companies such as GitHub and Bitbucket offer free version-controlled repositories.
 
 \subsection{Exercise}
 Show the students how to create an account on GitHub.
 
 With a data set comprising tidal data, demonstrate performing a harmonic analysis in Python, produce a plot of the tidal constituents, and add the plot to GitHub.
 
+\subsection{Summary}
+Summary of the key points, with emphasis on the best practices.
 
 \end{document}
