@@ -44,7 +44,8 @@
         \item Sea levels measured every hour at a fixed location\vspace*{1mm}
         \item Speed of a car throughout time\vspace*{1mm}
         \item Metadata (= data that describes other data) for webpages\vspace*{1mm}
-        \item Wind velocity at different locations in the UK
+        \item Wind velocity at different locations in the UK\vspace*{1mm}
+        \item Depth of a particle settling in a water tank, measured at various times.
       \end{itemize}
      \vspace*{4mm}
     \item Data can come from {\color{red}existing sources}, may be {\color{red}derived} from several data sets, or a {\color{red}new independent data set} can be generated.
@@ -54,7 +55,7 @@
 \frame{
    \frametitle{What is data?}
    \framesubtitle{More examples} 
-   Values of particle concentration in space:
+   Values of particle concentration in space following a volcanic eruption:
    \begin{figure}[H]
       \centering\includegraphics[width=0.32\columnwidth]{images/eruption_vfrac_10s.png}\hspace*{0.5mm}
       \centering\includegraphics[width=0.32\columnwidth]{images/eruption_vfrac_30s.png}\hspace*{0.5mm}
@@ -110,9 +111,10 @@
    \frametitle{Issues to consider}
    \framesubtitle{Data provenance} 
    \begin{itemize}
-    \item {\color{red}Where} did the data originally come from? \vspace*{3mm}
+    \item {\color{red}Where} did the data originally come from? Is there a {\color{red}chain} that can be traced back to the origin of the data? \vspace*{3mm}
     \item Can it be {\color{red}trusted}? (Is the author list available? Reputable journal?)\vspace*{3mm}
-    \item Is it {\color{red}reproducible}?
+    \item Is it {\color{red}reproducible}?\vspace*{3mm}
+    \item Has the data already been used successfully? Any reported issues?
    \end{itemize}
 }
 
@@ -123,8 +125,9 @@
     \item {\color{red}Who} can use the data, and {\color{red}how}?\vspace*{3mm}
     \item Who owns the {\color{red}copyright}? Are you allowed to publish it or use it in your thesis?
     \vspace*{3mm}
-    \item Any user licence? Creative Commons licences are becoming more popular and offer more freedom.\vspace*{3mm}
-    \item Data produced when employed by a Government agency may be under Crown Copyright.
+    \item Any user {\color{red}licence}? Creative Commons licences are becoming more popular and offer more freedom.\vspace*{3mm}
+    \item Data produced when employed by a Government agency may be under {\color{red}Crown Copyright}. The copyright does not belong to an individual, and is instead under the control of Her Majesty's Stationery Office (HMSO) - see \texttt{www.nationalarchives.gov.uk/information-management}.\vspace*{6mm}
+    \item \textbf{You need to know the answer to these points before you base any of your work on this data.}
    \end{itemize}
 }
 
@@ -132,7 +135,7 @@
    \frametitle{Issues to consider}
    \framesubtitle{File formats} 
    \begin{itemize}
-    \item Using {\color{red}standardised, open-source} file formats makes your data {\color{red}portable} and facilitates sharing of data by other researchers. \vspace*{3mm}
+    \item Using {\color{red}standardised, open-source} file formats makes your data {\color{red}portable} (between computers and operating systems) and facilitates sharing of data by other researchers. \vspace*{3mm}
     \item Comma-Separated Value ({\color{red}CSV}): a commonly-used format for simple data sets. Values in a single row are separated by commas. CSV files can contain multiple rows, thereby forming a table. \vspace*{3mm}
     \item eXtensible Markup Language ({\color{red}XML}): each piece of data is encapsulated in a tag which annotates/describes it.
    \end{itemize}
@@ -171,10 +174,11 @@
    \framesubtitle{Backing up}
    \begin{itemize}
     \item \textbf{The importance of regularly backing up data cannot be stressed enough!}\vspace*{3mm}
-    \item What if your hard drive failed right now? What if your computer was stolen?\vspace*{3mm}
+    \item What if your hard drive failed right now? What if your computer (and any connected backup device) was stolen?\vspace*{3mm}
     \item Storage space is reasonably cheap.\vspace*{3mm}
     \item Always keep {\color{red}several regular backups}, far apart from each other (not in the same building).\vspace*{3mm}
-    \item Know the Imperial College data backup policy.
+    \item Know the Imperial College data backup policy.\vspace*{6mm}
+    \item imperial.ac.uk/ict/services/computerroom/file\_and\_backup\_services
    \end{itemize}
 }
 
@@ -215,8 +219,8 @@
    \framesubtitle{Quality assurance}
    \begin{itemize}
     \item Test programs for {\color{red}correctness} in order to have confidence in the results.\vspace*{3mm}
-    \item Regression testing.\vspace*{3mm}
-    \item Programs can break even without changes to the source code.\vspace*{3mm}
+    \item {\color{red}Regression testing} - identifies new faults that have been introduced from changes to the code.\vspace*{3mm}
+    \item Programs can break even without changes to the source code (e.g. compiler faults).\vspace*{3mm}
     \item The data itself should also be tested using {\color{red}verification} and {\color{red}validation} techniques.
    \end{itemize}
 }
@@ -224,7 +228,7 @@
 \frame{
    \frametitle{Creating and manipulating data}
    \framesubtitle{Quality assurance -- Buildbot}
-   Buildbot: An automated testing framework.
+   Buildbot (\texttt{buildbot.net}): An automated continuous testing framework. The code is tested after any change is made.
    \begin{figure}[H]
       \centering\includegraphics[width=1\columnwidth]{images/buildbot.png}
    \end{figure}
@@ -245,7 +249,7 @@
    \begin{itemize}
     \item Used to keep track of changes to data, and the programs used to generate data.\vspace*{3mm}
     \item Facilitates team development.\vspace*{3mm}
-    \item \texttt{git-scm.com} contains excellent documentation on the Git version control system.\vspace*{3mm}
+    \item Examples: Subversion (\texttt{subversion.apache.org}), Bazaar (\texttt{bazaar.canonical.com}), Git (\texttt{git-scm.com})\vspace*{3mm}
     \item Some services such as GitHub (\texttt{www.github.com}) and Bitbucket (\texttt{www.bitbucket.org}) offer free Git-based repositories.
    \end{itemize}
 }
@@ -258,7 +262,7 @@
     \item Initialise a verson-controlled repository using \texttt{git init}\vspace*{3mm}
     \item Add files to the repository using \texttt{git add <file\_name\_here>}\vspace*{3mm}
     \item Remove files from the repository using \texttt{git rm <file\_name\_here>}\vspace*{3mm}
-    \item Commit any changes using \texttt{git commit -a}
+    \item Commit any changes using \texttt{git commit -a} (the \texttt{-a} adds the modified files to the staging area, and then commits the changes - see the documentation for more information.)
    \end{itemize}
 }
 
@@ -269,6 +273,15 @@
     \item Bitbucket offers unlimited free {\color{red}private} repositories.
     \item Set up an account at \texttt{www.bitbucket.org}.\vspace*{3mm}
     \item More about the exercise to come.......
+   \end{itemize}
+}
+
+\frame{
+   \frametitle{Additional resources}
+   \begin{itemize}
+    \item The UK Data Archive: \texttt{www.data-archive.ac.uk}\vspace*{3mm}
+    \item Information Commissioner's Office: \texttt{ico.org.uk}\vspace*{3mm}
+    \item IASSIST: \texttt{www.iassistdata.org}
    \end{itemize}
 }
 
