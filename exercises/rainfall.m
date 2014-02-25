@@ -8,7 +8,7 @@ function [t, m] = rainfall(filename, n)
    data_file = fopen(filename, 'r'); % Open the data file for reading
    line = fgets(data_file);
    while ischar(line)
-      s = strsplit(line, ' ', true);
+      s = strsplit(line);
       if(s{1} ~= '#') % We'll ignore any header lines.
          k = k + 1;
          T(k) = str2num(s{1}); % The current year under consideration
