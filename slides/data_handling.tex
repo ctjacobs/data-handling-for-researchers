@@ -222,9 +222,47 @@
    \begin{itemize}
     \item Data sets are often {\color{red}merged}, {\color{red}manipulated}, and {\color{red}generated} using computer programs or scripts.\vspace*{3mm}
     \item Often written in MATLAB or Python.\vspace*{3mm}
-
    \end{itemize}
 }
+
+\frame{
+   \frametitle{Creating and manipulating data}
+   \framesubtitle{Source code examples}
+   \footnotesize
+   Example from \texttt{www.programming4scientists.com}:
+   \vspace*{3mm}
+
+   \centering
+   \begin{tabular}{p{4.5cm}|l}
+   FUNCTION comppoly(x) & FUNCTION ComparePolynomials(x)\\
+   float y1, y2 & //DECLARE VARIABLES, PARAMETERS\\
+   float a1=0.1, b1=0.3, a2=2.1, b2=5.3, c=0.22 & float y\_line, y\_quadratic\\
+   y1 = a1*x + b1 & float lineParam = [0.1, 0.3]\\
+   y2 = a1*x\textasciicircum2 + b2*x + c & float quadParam = [2.1, 5.3, 0.22]\\
+   return(y2$>$y1) & \\
+   END FUNCTION & //CALCULATE THE LINE AND QUADRATIC\\
+    & VALUES AT X\\
+    & y\_line = lineParam[0]*x + lineParam[1]\\
+    & y\_quadratic = quadParam[0]*x\textasciicircum2 + quadParam[1]*x\\
+    &  + quadParam[2]\\
+    & \\
+    & //COMPARE THE FUNCTIONS, RETURNING\\
+    & A LOGICAL\\
+    & return(y\_line $>$ y\_quadratic)\\
+    & END FUNCTION
+   \end{tabular}
+}
+
+\frame{
+   \frametitle{Creating and manipulating data}
+   \framesubtitle{Commenting and documenting}
+   \begin{itemize}
+    \item Always {\color{red}comment} and {\color{red}document} your code to help yourself and others to understand how to use it.\vspace*{3mm}
+    \item Use sensible variable names.\vspace*{3mm}
+    \item Use {\color{red}metadata} to document the name of the author, the date the data was created, any terms of use, etc.
+   \end{itemize}
+}
+
 
 \frame{
    \frametitle{Creating and manipulating data}
@@ -244,15 +282,6 @@
    \begin{figure}[H]
       \centering\includegraphics[width=1\columnwidth]{images/buildbot.png}
    \end{figure}
-}
-
-\frame{
-   \frametitle{Creating and manipulating data}
-   \framesubtitle{Commenting and documenting}
-   \begin{itemize}
-    \item Always {\color{red}comment} and {\color{red}document} your code to help yourself and others to understand how to use it.\vspace*{3mm}
-    \item Use {\color{red}metadata} to document the name of the author, the date the data was created, any terms of use, etc.
-   \end{itemize}
 }
 
 \frame{
@@ -299,6 +328,15 @@
     \item Note 1: Any work that you store in a GitHub repository is made public (unless you pay for a private repository).
     \item Note 2: As an alternative, Bitbucket offers unlimited free {\color{red}private} repositories.
     \item Note 3: You can delete the GitHub account at any time under the account settings page.
+   \end{itemize}
+}
+
+\frame{
+   \frametitle{Creating and manipulating data}
+   \framesubtitle{Exercise 2 - Continued}
+   \begin{itemize}
+    \item If you need additional functionality: {\color{red}Git for Windows} (\texttt{msysgit.github.io}), or {\color{red}gitk} for Linux (\texttt{git-scm.com/docs/gitk}).\vspace*{3mm}
+    \item These aren't tied to just GitHub or Bitbucket.
    \end{itemize}
 }
 
