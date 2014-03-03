@@ -225,7 +225,10 @@
    \begin{itemize}
     \item Be aware of responsibilities to encrypt {\color{red}sensitive information}.\vspace*{3mm}
     \item Encrypting emails: Pretty Good Privacy (PGP) keys. \texttt{www.pgp.com}\vspace*{3mm}
-    \item Encrypting hard drives: TrueCrypt (Windows, Linux, Mac OS), eCryptfs (Linux).
+    \item Encrypting hard drives: TrueCrypt (Windows, Linux, Mac OS), eCryptfs (Linux).\vspace*{6mm}
+    
+    \item \footnotesize{The 'Climatic Research Unit email controversy': ``The Climatic Research Unit email controversy (also known as "Climategate")[2][3] began in November 2009 with the hacking of a server at the Climatic Research Unit (CRU) at the University of East Anglia (UEA) by an external attacker. [...] Climate change critics and others denying the significance of human caused climate change argued that the emails showed that global warming was a scientific conspiracy, in which they alleged that scientists manipulated climate data and attempted to suppress critics.''\\
+    http://en.wikipedia.org/wiki/Climatic\_Research\_Unit\_email\_controversy}
    \end{itemize}
 }
 
@@ -287,7 +290,6 @@
    \end{itemize}
 }
 
-
 \frame{
    \frametitle{Creating and manipulating data}
    \framesubtitle{Quality assurance}
@@ -313,7 +315,68 @@
    \framesubtitle{Version control systems}
    \begin{itemize}
     \item Used to {\color{red}keep track of changes} to data, and the programs used to generate data.\vspace*{3mm}
-    \item Facilitates team development.\vspace*{3mm}
+    \item Facilitates {\color{red}team development}.\vspace*{3mm}
+   \end{itemize}
+}
+
+\frame{
+   \frametitle{Creating and manipulating data}
+   \framesubtitle{Version control systems --- Motivation}
+   \small
+   \begin{itemize}
+      \item Many people choose to keep track of the different versions of a file by simply copying the current state of the file into a separate folder each time they want to record that change.
+      \item This is very {\color{red}error prone}. Easy to overwrite files accidentally or forgetting to make a note of what exactly was changed. Extra work to merge different changes together.
+   \end{itemize}
+   \begin{figure}[H]
+      \centering\includegraphics[width=0.4\columnwidth]{images/version_control_localonly.png}
+   \end{figure}\vspace*{-3mm}
+   \tiny{Image by Scott Chacon, used under the Attribution-NonCommercial-ShareAlike 3.0 Unported license.}
+}
+
+\frame{
+   \frametitle{Creating and manipulating data}
+   \framesubtitle{Version control systems --- Centralised}
+   \begin{itemize}
+      \item A {\color{red}server} stores all the files and the version history.
+      \item Each time the file's state is saved (`{\color{red}committed}'), a log message must be written. This also gets stored on the server.
+      \item Useful when multiple people are working on the same file.
+      \item Requires a {\color{red}connection to the server} to commit changes.
+   \end{itemize}
+   \begin{figure}[H]
+      \centering\includegraphics[width=0.45\columnwidth]{images/version_control_centralised.png}
+   \end{figure}\vspace*{-3mm}
+   \tiny{Image by Scott Chacon, used under the Attribution-NonCommercial-ShareAlike 3.0 Unported license.}
+}
+
+\frame{
+   \frametitle{Creating and manipulating data}
+   \framesubtitle{Version control systems --- Distributed}
+   \begin{itemize}
+      \item The checkout is effectively a {\color{red}full backup} of the data.
+      \item Does not require a connection to the server to commit changes.
+   \end{itemize}
+   \begin{figure}[H]
+      \centering\includegraphics[width=0.4\columnwidth]{images/version_control_distributed.png}
+   \end{figure}
+   \tiny{Image by Scott Chacon, used under the Attribution-NonCommercial-ShareAlike 3.0 Unported license.}
+}
+
+\frame{
+   \frametitle{Creating and manipulating data}
+   \framesubtitle{Version control systems --- Tracking Differences}
+   \begin{itemize}
+      \item When committing or `checking-in' changes, the differences between the files you are committing and the files from the previous version are recorded in the history log.
+   \end{itemize}
+   \begin{figure}[H]
+      \centering\includegraphics[width=0.75\columnwidth]{images/version_control_differences.png}
+   \end{figure}
+   \tiny{Image by Scott Chacon, used under the Attribution-NonCommercial-ShareAlike 3.0 Unported license.}
+}
+
+\frame{
+   \frametitle{Creating and manipulating data}
+   \framesubtitle{Version control systems --- Examples}
+   \begin{itemize}
     \item Examples: {\color{red}Subversion} (\texttt{subversion.apache.org}), {\color{red}Bazaar} (\texttt{bazaar.canonical.com}), {\color{red}Git} (\texttt{git-scm.com})\vspace*{3mm}
     \item Some services such as GitHub (\texttt{www.github.com}) and Bitbucket (\texttt{www.bitbucket.org}) offer free Git-based repositories.
    \end{itemize}
@@ -369,9 +432,10 @@
    \begin{itemize}
     \item The UK Data Archive: \texttt{www.data-archive.ac.uk}\vspace*{3mm}
     \item The Software Sustainability Institute: \texttt{www.software.ac.uk}\vspace*{3mm}
+    \item Software Carpentry: \texttt{software-carpentry.org}\vspace*{3mm}
+    \item Digital Curation Centre: \texttt{www.dcc.ac.uk}\vspace*{3mm}
     \item Information Commissioner's Office: \texttt{ico.org.uk}\vspace*{3mm}
-    \item IASSIST: \texttt{www.iassistdata.org}\vspace*{3mm}
-    \item Software Carpentry: \texttt{software-carpentry.org}\vspace*{10mm}
+    \item IASSIST: \texttt{www.iassistdata.org}\vspace*{10mm}
     
     \item G. Wilson et al. (2014). Best Practices for Scientific Computing, PLoS Biol 12(1). doi: 10.1371/journal.pbio.1001745\vspace*{2mm}
     \item L. Hatton, A. Roberts (1994). How accurate is scientific software?, Software Engineering, IEEE Transactions, 20(10):785--797. doi: 10.1109/32.328993
